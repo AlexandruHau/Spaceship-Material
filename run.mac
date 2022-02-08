@@ -1,0 +1,24 @@
+# Macro file for Basic data collection
+#
+# Initialize kernel
+/run/initialize
+#
+# Defaults:
+# Length: 2m, thickness: 5cm
+#
+# Minimise verbosity
+/control/verbose 0
+/analysis/verbose 0
+/process/verbose 0
+/particle/verbose 0
+/material/verbose 0
+/event/verbose 0
+/run/verbose 0
+# first disable the visualisation
+# to reduce runtime
+/vis/disable
+/tracking/storeTrajectory 0
+# now run
+/run/beamOn 1000000
+# finished
+exit
